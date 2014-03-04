@@ -1,0 +1,10 @@
+# Compiled source #
+###################
+*.o
+*~
+
+
+#Executable files #
+###################
+relay/relay
+iso14443reader/reader
