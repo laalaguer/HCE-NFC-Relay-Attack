@@ -1,18 +1,27 @@
 This Project is meant for developing a "Card Relay Attack" on the Desfire card.
 
-Requirements for environment:
-1. two cell phones runs Cyanogenmod 9, supports NFC and Bluetooth.
+[Requirements for environment]
+1. two cell phones : one runs Cyanogenmod 9, another runs regular Android(or Cyanogenmod 9). Both support NFC and Bluetooth.
 2. one Desfire card (a regular bus card maybe).
-3. one reader (a regular bus ticket reader).
+3. one reader (a regular ACR122U reader maybe).
 
-General progress:
-1. One cell phone will act as a NFC reader, and the other as a DesFire card.
-2. The APDU command that reader sends and APDU answers from DesFire card will be relayed by cell phones via bluetooth.
+[General progress]
+1. One phone acts as a NFC reader, Runs CyReaderDesFireBluetooth apk. (OS: reagular Android)
+2. One phone emulates as a DesFire card. Runs CyHCEBluetooth apk. (OS: Cyanogemod 9)
+3. Two phone conneced with Bluetooth.
+4. The APDU command that reader sends and APDU answers from DesFire card will be relayed by cell phones via bluetooth.
 
-Graph for relay attack:
+[Graph for relay attack]
+"Bus card"(DesFire card) -- "Reader" phone <--> "Card Emulation" phone -- "ACR122U Reader". 
 
-"Bus Ticket"(DesFire card) -- "Reader" phone <--> "Card Emulation" phone -- "Bus Reader". 
+[Package Description]
+CyHCEBasic : Host card emulation app, runs on Cyanogenmod 9. Reply to any input with dummyAnswer. No Bluetooth feature.
 
+CyReaderDesFire : Card reader app, runs on regular Android. Query any card with dummyQuestion. No Bluetooth feature.
 
-Future development:
+CyHCEBluetooth : Host card emulation app, runs on Cyanogenmod 9. Forward any reader query to CyReaderDesFireBluetooth.
+
+CyReaderDesFireBluetooth : Card reader app, runs on regular Android. Forward any card answer to CyHCEBluetooth.
+
+[Future development]
 1. Add Wifi or 3G/4G connection option other than Bluetooth.
