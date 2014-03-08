@@ -16,9 +16,11 @@ This Project is meant for developing a "Card Relay Attack" on the Desfire card.
 
 [Package Description]
 CyHCEBasic : Host card emulation app, runs on Cyanogenmod 9. Reply to any input with dummyAnswer. No Bluetooth feature.
+
 CyReaderDesFire : Card reader app, runs on regular Android. Query any card with dummyQuestion. No Bluetooth feature.
 
 CyHCEBluetooth : Host card emulation app, runs on Cyanogenmod 9. Forward any reader query to CyReaderDesFireBluetooth.
+
 CyReaderDesFireBluetooth : Card reader app, runs on regular Android. Forward any card answer to CyHCEBluetooth.
 
 [Future development]
