@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textViewBTstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bluetooth status bar" />
+    
+    <TextView
+        android:id="@+id/textViewNFCStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NFC status bar" />
+    
+    <ListView android:id="@+id/LogList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:layout_weight="1"
+    />
+    
+    
+
+</LinearLayout>
